@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Activity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="wts.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="points" src="cheers.mp3"></audio>
+<div class="header" style="width:100%; background-color:rgba(255, 255, 255, 0)">
+   <img src="Logo.png" width="12%" style="float:left; margin-top:10px" class="img-responsive">
+   <span> <img src="header.png" width="50%" height="100px"; class="img-responsive"></span>
+</div>
+<br>
+<br>
+  <center>
+<div class ="container">
+    <h3 id="story"> Oliver and Mogli went to the shop and bought some chocolates. <br>
+      Oliver paid $ 237 and Mogli paid $ 354. Analyze how many notes of hundreds, tens and loose amount did they give to the shopkeeper?  </h3>
+    <img src="a.jpg" class="img-responsive" width="600">
+
+    <br> <br>
+
+  <span> Oliver:</span> <input id ="input1" type="number" placeholder="hundreds"> <input id ="input2" type="number" placeholder="tens"> <input id ="input3" type="number" placeholder="Units">
+  <br><br>
+  <span> Mogli:</span> <input id ="input4" type="number" placeholder="hundreds"> <input id ="input5" type="number" placeholder="tens"> <input id ="input6" type="number" placeholder="Units">
+      <br><br>
+  <button id="subbtn" class="btn btn-success" onclick="checkAnswer()">Submit Answer</button>
+  
+  <p id="compliment"></p>
+  <hr>
+
+  <h3 id="story"> Oliver and Mogli went to the toy shop and bought some toys. <br>
+    Oliver gave $ 529 and Mogli paid $ 421 . Shopkeeper only takes Rs. 100 notes, Rs. 10 notes and Rs. 1 coins. Analyze how many notes of hundreds and tens and how many 1 Rs coin did they give?</h3>
+  <img src="a.jpg" class="img-responsive" width="600">
+
+  <br> <br>
+
+<span> Oliver:</span> <input id ="input7" type="number" placeholder="hundreds"> <input id ="input8" type="number" placeholder="tens"> <input id ="input9" type="number" placeholder="Units">
+<br>
+<br>
+<span> Mogli:</span> <input id ="input10" type="number" placeholder="hundreds"> <input id ="input11" type="number" placeholder="tens"> <input id ="input12" type="number" placeholder="Units">
+    <br><br>
+<button id="subbtn" class="btn btn-success" onclick="checkAnswer1()">Submit Answer</button>
+
+<p id="compliment1"></p>
+   </center>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+   <footer style="background-color:antiquewhite; font-size:20px;">Copyright: Way to Succeed Classes <img src="Logo.png" width="70"></footer>
+   
+   <script>
+      function checkAnswer(){
+        a= document.getElementById("input1").value;
+        b= document.getElementById("input2").value;
+        c= document.getElementById("input3").value;
+        x= document.getElementById("input4").value;
+        y= document.getElementById("input5").value;
+        z= document.getElementById("input6").value;
+        num1=a+b+c
+        num = x+y+z
+        if(num1=="237" && num=="354"){
+          document.getElementById("compliment").innerHTML= "Well Done &#128512"
+          document.getElementById("points").play();
+        }
+        else{
+          document.getElementById("compliment").innerHTML= "Think Again &#128533"
+        }
+      }
+
+      function checkAnswer1(){
+        a= document.getElementById("input7").value;
+        b= document.getElementById("input8").value;
+        c= document.getElementById("input9").value;
+        x= document.getElementById("input10").value;
+        y= document.getElementById("input11").value;
+        z= document.getElementById("input12").value;
+        num1=a+b+c
+        num = x+y+z
+        if(num1=="529" && num=="421"){
+          document.getElementById("compliment1").innerHTML= "Well Done &#128512"
+          document.getElementById("points").play();
+        }
+        else{
+          document.getElementById("compliment1").innerHTML= "Think Again &#128533"
+        }
+      }
+   </script>
+</body>
+
+</html>
